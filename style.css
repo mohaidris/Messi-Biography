@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Light background color for better contrast */
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #00796b; /* Teal color for the navbar */
+}
+
+.heading {
+  color: white; /* White color for the heading */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white; /* White color for the links */
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 14px 16px;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover:not(.active) {
+  background-color: #004d40; /* Darker teal on hover */
+}
+
+.slideshow {
+  position: relative;
+  width: calc(100% - 40px); /* Adjust the width to fit between the left and right divs */
+  margin: 20px auto; /* Center the slideshow with equal margins on top and bottom */
+  height: 70vh; /* Adjust the height as needed */
+  box-shadow: 0 4px 8px rgba(240, 237, 237, 0.2); /* Optional: Add some shadow for better visibility */
+  border: 2px solid rgb(235, 233, 233); /* Add border around the slideshow */
+  overflow: hidden; /* Prevent overflow of images */
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.slide {
+  display: none; /* Hide all slides by default */
+  position: absolute;
+  width: 100%; /* Full width of the slideshow */
+  height: 100%; /* Full height of the slideshow */
+}
+
+.slide.is-active {
+  display: block; /* Show the active slide */
+}
+.slide img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  padding: 0 20px;
+}
+
+.arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.body {
+  display: flex; /* Use flexbox for layout */
+  align-items: stretch; /* Ensures children take the full height */
+  margin: 20px; /* Margin around the body container */
+}
+
+.bodybiography {
+  margin: 20px; /* Margin around the biography container */
+}
+
+.born, .education, .career, .family {
+  background-color: #e0f7fa; /* Light cyan background for sections */
+  margin-bottom: 20px; /* Space between sections */
+  padding: 15px; /* Padding for inner spacing */
+  border-radius: 8px; /* Rounded corners for sections */
+}
+
+.bodyleft {
+  background-color: #e0f7fa; /* Light cyan background for the left section */
+  margin-right: 20px; /* Margin between left and right divs */
+  padding: 10px; /* Padding for inner spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space evenly */
+  flex: 1; /* Allow this div to grow */
+}
+
+.bodyrigt {
+  margin-left: 20px; /* Margin around the right div */
+  flex: 1; /* Allow this div to grow */
+  display: flex;
+  flex-direction: column; /* Stack up and down sections vertically */
+  justify-content: center; /* Center contents vertically */
+}
+
+.up {
+  flex: 1; /* Allow this section to grow */
+}
+
+.down {
+  margin-top: 20px; /* Space between up and down sections */
+  flex: 1; /* Allow this section to grow */
+  background-color: #c5cae9; /* Light purple background for the down section */
+  border-top: 2px solid #3f51b5; /* Darker purple border between up and down sections */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center contents horizontally */
+  justify-content: center; /* Center contents vertically */
+}
+
+.reference-links {
+  display: flex;
+  align-items: center; /* Center icons and text vertically */
+}
+
+.reference-links img {
+  width: 30px; /* Reduced icon size */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 5px; /* Space between link text and icon */
+}
+
+/* Apply Mocodo font to h3 headings */
+h3 {
+  font-family: "Mocodo", serif; /* Apply Mocodo font */
+  font-style: normal; /* Change to normal */
+  color: #3e2723; /* Dark brown color for headings */
+}
+
+h2 {
+  font-family: "Mocodo", serif;
+  font-style: normal; /* Change to normal */
+  color: #3e2723; /* Dark brown color for h2 */
+}
+
+.footer {
+  display: flex;
+  flex-direction: column; /* Stack footer items vertically */
+  align-items: center; /* Center align items */
+  background-color: #c49fd3; /* Light purple background for footer */
+  margin: 20px;
+  padding: 10px; /* Padding for footer */
+}
+
+p {
+  font-family: "Subway", serif;
+  color: #4a148c; /* Dark purple color for paragraph text */
+  margin: 5px 0; /* Margin for spacing */
+}
+
+.bodyaward {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between left and right divs */
+  align-items: stretch; /* Ensure both divs have the same height */
+  margin: 20px; /* Margin around the bodyaward section */
+}
+
+.awardleft {
+  flex: 0 0 30%; /* Fixed width for the left div */
+  display: flex; /* Center the image vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.awardleft img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.awardright {
+  flex: 1; /* Allow the right div to grow and occupy remaining space */
+  background-color: #e0f7fa; /* Light cyan background for the right section */
+  padding: 20px; /* Padding for inner spacing */
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: space-between; /* Space out the sections vertically */
+}
+
+.rightup, .rightdown {
+  margin-bottom: 20px; /* Space between the two sections */
+}
+
+h3 {
+  margin-bottom: 10px; /* Space below headings */
+}
+
+ul {
+  list-style-type: disc; /*
+  .contactsbody {
+    padding: 20px; /* Add padding around the contacts body */
+}
+
+.contactsbody {
+  padding: 20px; /* Add padding around the contacts body */
+}
+
+.contactstop {
+  background-color: #e0f7fa; /* Background color for the location section */
+  margin: 0 auto; /* Center the contact stop section */
+  width: calc(100% - 40px); /* Match the width with the footer margins */
+  max-width: 1200px; /* Optional: Set a maximum width */
+  padding: 20px; /* Add padding inside the contact stop */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.contactstop iframe {
+  width: 100%; /* Make the iframe take the full width of the container */
+  height: 400px; /* Adjust height as needed */
+  border: 0; /* Remove border */
+  margin-top: 20px; /* Space above the map */
+}
+
+.contactsbottom {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the left and right sections */
+  width: calc(100% - 40px); /* Adjust width to match footer margins */
+  margin: 20px auto; /* Center the bottom section */
+}
+
+.leftbottom, .rightbottom {
+  flex: 1; /* Allow both sections to grow equally */
+  margin: 10px; /* Add margin between left and right sections */
+  padding: 20px; /* Add padding inside each section */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.leftbottom {
+  background-color: #cce7ff; /* Light blue background for social media section */
+}
+
+.rightbottom {
+  background-color: #ffe0b2; /* Light orange background for developer info section */
+}
+
+.footer {
+  display: flex;
+  flex-direction: column; /* Stack footer items vertically */
+  align-items: center; /* Center align items */
+  background-color: #c49fd3; /* Light purple background for footer */
+  margin: 20px;
+  padding: 10px; /* Padding for footer */
+}
